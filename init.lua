@@ -38,9 +38,10 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
-vim.g.copilot_assume_mapped = true
+
 vim.g.copilot_node_command = "~/.nvm/versions/node/v17.9.1/bin/node"
-vim.g.copilot_no_tab_map = 1
 vim.g.lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 vim.g.lastplace_ignore_buftype = "quickfix,nofile,help"
 vim.g.lastplace_open_folds = 0
+vim.g.copilot_assume_mapped = true
+
