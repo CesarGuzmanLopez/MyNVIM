@@ -44,4 +44,6 @@ vim.g.lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 vim.g.lastplace_ignore_buftype = "quickfix,nofile,help"
 vim.g.lastplace_open_folds = 0
 vim.g.copilot_assume_mapped = true
-
+vim.opt.list = true
+vim.opt.listchars:append "space: "
+vim.opt.termguicolors = true
