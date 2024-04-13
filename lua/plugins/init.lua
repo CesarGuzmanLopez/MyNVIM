@@ -14,20 +14,6 @@ return {
          require "configs.lspconfig"
       end,
    },
-
-   {
-      "williamboman/mason.nvim",
-      opts = {
-         ensure_installed = {
-            "lua-language-server",
-            "stylua",
-            "html-lsp",
-            "css-lsp",
-            "prettier",
-         },
-      },
-   },
-
    {
       "nvim-treesitter/nvim-treesitter",
       opts = {
@@ -44,7 +30,34 @@ return {
    },
    {
       "williamboman/mason.nvim",
-      opts = require "mason",
+      opts = {
+         ensure_installed = {
+            "lua-language-server",
+            "stylua",
+            "css-lsp",
+            "html-lsp",
+            "prettier",
+            "eslint-lsp",
+            "tailwindcss-language-server",
+            "typescript-language-server",
+            "angular-language-server",
+            "eslint_d",
+            "jsonlint",
+            "json-lsp",
+            "deno",
+            "lua-language-server",
+            "stylua",
+            "html-lsp",
+            "css-lsp",
+            "prettier",
+            "clangd",
+            "java-debug-adapter",
+            "java-language-server",
+            "java-test",
+            "gradle-language-server",
+            "cpptools",
+            },
+      },
    },
    {
       "zbirenbaum/copilot.lua",
@@ -80,7 +93,7 @@ return {
          },
       },
    },
-    {
-    "github/copilot.vim"
-    }
+   {
+      "github/copilot.vim",
+   },
 }
