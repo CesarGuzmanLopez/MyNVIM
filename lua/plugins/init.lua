@@ -14,10 +14,11 @@ return {
          require "configs.lspconfig"
       end,
    },
-   {
+    
+    {
       "nvim-treesitter/nvim-treesitter",
       opts = {
-         ensure_installed = {
+            ensure_installed = {
             "vim",
             "lua",
             "vimdoc",
@@ -86,16 +87,30 @@ return {
       },
       opts = {
          sources = {
-            { name = "nvim_lsp", group_index = 2 },
-            { name = "copilot", group_index = 2 },
-            { name = "luasnip", group_index = 2 },
-            { name = "buffer", group_index = 2 },
-            { name = "nvim_lua", group_index = 2 },
-            { name = "path", group_index = 2 },
+            { name = "copilot", group_index = 1 },
+            { name = "nvim_lsp", group_index = 1 },
+            { name = "luasnip", group_index = 1 },
+            { name = "buffer", group_index = 1 },
+            { name = "nvim_lua", group_index = 1 },
+            { name = "path", group_index = 1 },
          },
       },
    },
+
    {
       "github/copilot.vim",
    },
+    {
+  "startup-nvim/startup.nvim",
+    dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      require("startup").setup({
+        telescope = {
+          on_config_done = function()
+            require("telescope").load_extension("copilot")
+          end,
+        },
+      })
+    end,
+    }
 }
