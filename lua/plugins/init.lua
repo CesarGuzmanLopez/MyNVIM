@@ -56,7 +56,9 @@ return {
             "java-test",
             "gradle-language-server",
             "cpptools",
-            },
+            "pyright",
+            "rust-analyzer",
+         },
       },
    },
    {
