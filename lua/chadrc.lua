@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-	theme = "material-lighter",
+	theme = "jabuti",
     transparency =true,
 	 hl_override = {
 	 	["@comment"] = { italic = true },
