@@ -1,12 +1,10 @@
 require "nvchad.mappings"
 
-
-
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map('n', '<C-H>', 'db', {noremap = true})
-map('i', '<C-H>', '<C-w>', {noremap = true})
-
-
+-- bor una palabra completa con alt retroceso
+map("n", "<BS>", ":normal baw<CR>", { noremap = true, silent = true })
+map("i", "<BS>", "<C-w>", { noremap = true, silent = true })
+map("i", "<M-BS>", "<C-w>", { noremap = true, silent = true })
