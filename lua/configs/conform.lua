@@ -6,6 +6,18 @@ local options = {
       js = { "prettier" },
       ts = { "prettier" },
       scss = { "prettier" },
+      json = { "prettier" },
+      yaml = { "prettier" },
+      markdown = { "prettier" },
+      rust = { "rustfmt" },
+      python = { "black" },
+      go = { "gofmt" },
+      sh = { "shfmt" },
+      nix = { "nixfmt" },
+      toml = { "tomlfmt" },
+      vue = { "prettier" },
+      java = { "google-java-format" },
+      kotlin = { "ktlint" },
    },
    format_on_save = {
       -- These options will be passed to conform.format()

@@ -222,4 +222,37 @@ return {
          require "configs.lspconfig"
       end,
    },
+   {
+      "goolord/alpha-nvim",
+      dependencies = {
+         "nvim-tree/nvim-web-devicons",
+         "nvim-lua/plenary.nvim",
+      },
+      config = function()
+         require("alpha").setup(require("alpha.themes.theta").config)
+      end,
+      lazy = false,
+   },
+   {
+      "gennaro-tedesco/nvim-possession",
+      dependencies = {
+         "ibhagwan/fzf-lua",
+      },
+      config = true,
+      init = function()
+         local possession = require "nvim-possession"
+         vim.keymap.set("n", "<leader>sl", function()
+            possession.list()
+         end, { desc = "session list" })
+         vim.keymap.set("n", "<leader>sn", function()
+            possession.new()
+         end, { desc = "session new" })
+         vim.keymap.set("n", "<leader>su", function()
+            possession.update()
+         end, { desc = "session update" })
+         vim.keymap.set("n", "<leader>sd", function()
+            possession.delete()
+         end, { desc = "session delete" })
+      end,
+   },
 }
