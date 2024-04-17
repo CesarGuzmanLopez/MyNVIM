@@ -1,7 +1,7 @@
 return {
    {
       "stevearc/conform.nvim",
-       event = 'BufWritePre', -- uncomment for format on save
+      event = "BufWritePre", -- uncomment for format on save
       config = function()
          require "configs.conform"
       end,
@@ -83,6 +83,8 @@ return {
             "php-cs-fixer",
             "jdtls", -- Java Language Server
             "phpactor",
+            "kotlin-debug-adapter",
+            "kotlin-language-server",
          },
          registries = {
             "github:nvim-java/mason-registry",
@@ -198,7 +200,11 @@ return {
          },
       },
    },
-       -- These are some examples, uncomment them if you want to see them work!
+   {
+      "udalov/kotlin-vim",
+      ft = "kotlin",
+   },
+   -- These are some examples, uncomment them if you want to see them work!
    {
       "neovim/nvim-lspconfig",
       config = function()
@@ -206,6 +212,4 @@ return {
          require "configs.lspconfig"
       end,
    },
-
-
 }
