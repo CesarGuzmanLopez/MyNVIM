@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-   theme = "jabuti",
+   theme = "github_dark",
    transparency = true,
    hl_override = {
       ["@comment"] = { italic = true, fg = "#affaff" },
