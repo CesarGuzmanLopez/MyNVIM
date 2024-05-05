@@ -89,6 +89,10 @@ return {
             "texlab",
             "textlint",
             "deno",
+            "pydocstyle",
+            "pylyzer",
+            "python-lsp-server",
+            "pylint",
          },
          registries = {
             "github:nvim-java/mason-registry",

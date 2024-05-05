@@ -14,6 +14,7 @@ local servers = {
    "tsserver",
    "kotlin_language_server",
    "texlab",
+   "pyright",
 }
 
 for _, lsp in ipairs(servers) do
